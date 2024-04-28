@@ -737,7 +737,7 @@
 // Actual motor currents in Amps. The number of entries must match DIGIPOT_I2C_NUM_CHANNELS.
 // These correspond to the physical drivers, so be mindful if the order is changed.
 #define DIGIPOT_I2C_MOTOR_CURRENTS \
-    { 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 } //  AZTEEG_X3_PRO
+    { 0.9, 0.9, 0.9, 0.9, 1.0, 1.0, 1.0, 1.0 } //  AZTEEG_X3_PRO
 
 //===========================================================================
 //=============================Additional Features===========================
