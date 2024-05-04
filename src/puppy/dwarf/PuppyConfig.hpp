@@ -31,4 +31,4 @@ inline constexpr auto MODBUS_FIFO_MAX_COUNT = 31; // Same value as MODBUS_FIFO_L
 //*** Safety checks configuration
 
 static constexpr bool ENABLE_HEATER_CURRENT_CHECKS = true;
-static constexpr float MAX_HEATER_CURRENT_A = 2.0f;
+static constexpr float MAX_HEATER_CURRENT_A = 3.0f;
