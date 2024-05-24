@@ -121,11 +121,6 @@
   #include "feature/dac/stepper_dac.h"
 #endif
 
-#if ENABLED(EXPERIMENTAL_I2CBUS)
-  #include "feature/twibus.h"
-  TWIBus i2c;
-#endif
-
 #if ENABLED(I2C_POSITION_ENCODERS)
   #include "feature/I2CPositionEncoder.h"
 #endif
@@ -256,18 +251,6 @@ void setup_powerhold() {
 #if HAS_STEPPER_RESET
   void disableStepperDrivers() { OUT_WRITE(STEPPER_RESET_PIN, LOW); } // Drive down to keep motor driver chips in reset
   void enableStepperDrivers()  { SET_INPUT(STEPPER_RESET_PIN); }      // Set to input, allowing pullups to pull the pin high
-#endif
-
-#if ENABLED(EXPERIMENTAL_I2CBUS) && I2C_SLAVE_ADDRESS > 0
-
-  void i2c_on_receive(int bytes) { // just echo all bytes received to serial
-    i2c.receive(bytes);
-  }
-
-  void i2c_on_request() {          // just send dummy data for now
-    i2c.reply("Hello World!\n");
-  }
-
 #endif
 
 /**
