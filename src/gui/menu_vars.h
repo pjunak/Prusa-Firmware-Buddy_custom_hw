@@ -60,7 +60,7 @@ struct MenuVars {
     constexpr static std::array<int, MenuVars::RANGE_SZ> microstep_exponential_range = { 1, 256, 2 }; // 2^0 - 2^8 .. 1, 2, 4, .. , 128, 256
     constexpr static std::array<int, MenuVars::RANGE_SZ> microstep_exponential_range_with_0 = { 0, 256, 2 }; // 0 + 2^0 - 2^8 .. 0, 1, 2, 4, .. , 128, 256
     constexpr static std::array<int, MenuVars::RANGE_SZ> axis_rms_currents_range = { 0, 800, 1 };
-    constexpr static std::array<int, MenuVars::RANGE_SZ> steps_per_unit_range = { 1, 2000, 1 }; // small range, experimental feature
+    constexpr static std::array<int, MenuVars::RANGE_SZ> steps_per_unit_range = { 1, 8000, 1 }; // small range, experimental feature
 #if XL_ENCLOSURE_SUPPORT()
     constexpr static std::array<int, RANGE_SZ> enclosure_fan_percent_range = { 40, 100, 1 };
 #endif
